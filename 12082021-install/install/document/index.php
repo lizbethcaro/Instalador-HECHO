@@ -1,5 +1,5 @@
 <?php
-include("../install/www/menu.php");
+//include("../install/www/menu.php");
 header('Content-type: text/html; charset=utf-8');
 
 //Archivos requeridos

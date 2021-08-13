@@ -30,15 +30,29 @@ $sql = str_replace("//",'', $sql );
         if($conexion->multi_query($sql))
         {
             echo "<h1>LA BASE DE DATOS HA SIDO CREADA</h1>";
+            
         }else{
             echo "Error: ". $conexion->error;
         }
-       
+
         //$sql = file_get_contents( "../document/DB/traductor_nativo.sql" );
     }
-    
- 
-    
-    echo str_replace("\n", "<br>", $sql );
+  
+    //echo str_replace("\n", "<br>", $sql );
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="../document/index.php">
+<input type="submit" value="Acceder al traductor">
+</form>
+    
+</body>
+</html>
