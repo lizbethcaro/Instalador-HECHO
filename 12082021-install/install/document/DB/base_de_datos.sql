@@ -18,7 +18,7 @@ END$$
 DELIMITER ;
 
 
-DROP TABLE IF EXISTS idiomas;
+
 CREATE TABLE IF NOT EXISTS  idiomas (
   id int(3) NOT NULL,
   idioma varchar(255) COLLATE utf8_spanish_ci NOT NULL,
@@ -26,13 +26,13 @@ CREATE TABLE IF NOT EXISTS  idiomas (
 );
 
 
-INSERT INTO `idiomas` (`id`, `idioma`, `composicion_prosa`) VALUES
+INSERT INTO idiomas (id, idioma, composicion_prosa) VALUES
 (1, 'español', '1,2,3,4,5,6,7,8,9,10,'),
 (4, 'tucano', '4,10,9,8,7,6,5,3,2,1,');
 
 
-DROP TABLE IF EXISTS `palabras`;
-CREATE TABLE IF NOT EXISTS `palabras` (
+
+CREATE TABLE IF NOT EXISTS palabras (
   `id` int(11) NOT NULL,
   `palabra` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `id_tipo` int(2) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `palabras` (
 
 
 
-INSERT INTO `palabras` (`id`, `palabra`, `id_tipo`, `id_idioma`) VALUES
+INSERT INTO palabras (id, palabra, id_tipo, id_idioma) VALUES
 (1, 'mamá', 1, 1),
 (2, 'ními', 1, 4),
 (4, 'mi', 2, 1),
@@ -301,7 +301,7 @@ INSERT INTO `palabras` (`id`, `palabra`, `id_tipo`, `id_idioma`) VALUES
 (282, 'ña\'agṹ', 2, 4),
 (283, 'negra', 2, 1);
 
-DROP TABLE IF EXISTS `relacion_palabras`;
+
 CREATE TABLE IF NOT EXISTS `relacion_palabras` (
   `id` int(11) NOT NULL,
   `id_palabra_origen` int(11) NOT NULL,
@@ -451,7 +451,7 @@ INSERT INTO `relacion_palabras` (`id`, `id_palabra_origen`, `id_palabra_traducci
 (156, 281, 282),
 (157, 283, 75);
 
-DROP TABLE IF EXISTS `tipos`;
+
 CREATE TABLE IF NOT EXISTS  `tipos` (
   `id` int(2) NOT NULL,
   `tipo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
@@ -475,7 +475,7 @@ INSERT INTO `tipos` (`id`, `tipo`, `descripcion`) VALUES
 (10, 'objeto', 'El objeto directo y el objeto indirecto son estructuras sintácticas que modifican al verbo y, por ende, están presentes en el predicado de la oración. Por ejemplo: Entregamos el <b>diploma</b> a María');
 
 
-DROP TABLE IF EXISTS `usuarios`;
+
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int(3) NOT NULL,
   `usuario` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
