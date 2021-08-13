@@ -18,7 +18,7 @@ if($conexion == "../document/DB/traductor_nativo.sql")
 	
 	}else{
 			//echo "El archivo no existe, se proceder&aacute; a ir al instalador.";
-			header( "location: ../install/www/menu.php" );
+			header( "location: ../install/document/index.php" );
 		}
 }
 

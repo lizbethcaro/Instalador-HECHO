@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Autor: Lizbeth johana caro suarez.
+ * 
+ * Este es el instalador completarado
+ */
 
 $sql = file_get_contents( "../document/DB/base_de_datos.sql" );
 
@@ -25,7 +29,7 @@ $sql = str_replace("//",'', $sql );
         
         if($conexion->multi_query($sql))
         {
-            echo "base cread";
+            echo "<h1>LA BASE DE DATOS HA SIDO CREADA</h1>";
         }else{
             echo "Error: ". $conexion->error;
         }
